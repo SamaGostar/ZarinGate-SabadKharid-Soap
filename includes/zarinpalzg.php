@@ -46,7 +46,7 @@
 						  
 						  );
 					
-						  if ($res->status == 100 ) {
+						  if ($res->Status == 100 ) {
 								// this is a succcessfull payment
 
 								$pininfo = ostSetOrderStatusToOrder($orderID, $comStatID, 'Your Online Payment with ZARINPAL gateway accepted', 1);
@@ -62,7 +62,7 @@
 							   // this is a UNsucccessfull payment
 								ostSetOrderStatusToOrder($orderID, 1);
 								$body =	ERROR_SHETAB_19;
-	//							echo 'STATUS WITH SOAP NOT 0 STATUS IS====>'.$status;
+								echo 'ERR STATUS====>'.$res->Status ;
 						  }
 
 				}
